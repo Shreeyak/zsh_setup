@@ -3,8 +3,25 @@ Instructions for setting up zsh shell, with oh-my-zsh and some plugins
 ![](modified_shell.png)
 
 # Setting up ZSH
+ZSH is an alternative to bash. It has many cool features, plugins and themes.
+Example: interactive cd, autocorrection of commands, fuzzy finder, syntax highlighting, etc.
+
+Make sure zsh is installed:
+```shell script
+$ zsh --version
+zsh 5.4.2 (x86_64-ubuntu-linux-gnu)
+```
+
+If not, install with:
+```shell script
+sudo apt install zsh
+
+# Make it default shell
+chsh -s $(which zsh)
+```
 
 ## Install oh-my-zsh
+https://github.com/ohmyzsh/ohmyzsh
 ```shell script
 sh -c "$(wget --no-check-certificat -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
