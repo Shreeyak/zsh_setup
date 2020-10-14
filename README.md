@@ -1,5 +1,6 @@
 # zsh_setup
 Instructions for setting up zsh shell, with oh-my-zsh and some plugins
+![](modified_shell.png)
 
 # Setting up ZSH
 
