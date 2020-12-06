@@ -29,6 +29,19 @@ sh -c "$(wget --no-check-certificat -O- https://raw.githubusercontent.com/ohmyzs
 
 
 ## Install Plugins
+
+### Standard plugins
+Clone the following plugin's repos into oh-my-zsh's plugin directory:
+- zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
+- zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
+- zsh-256color: https://github.com/chrissicool/zsh-256color
+
+```shell script
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone git@github.com:chrissicool/zsh-256color.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-256color
+```
+
 Within the `~/zshrc` file, search for the line with plugins and add:
 ```shell script
 # Which plugins would you like to load?
@@ -36,7 +49,7 @@ Within the `~/zshrc` file, search for the line with plugins and add:
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-256color)
+plugins=(git zsh-autosuggestions zsh-256color zsh-syntax-highlighting)
 ```
 
 ### Fuzzy finder
@@ -52,27 +65,13 @@ Running install will add the following lines to `.zshrc`:
  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
-### zsh syntax highlighting
-https://github.com/zsh-users/zsh-syntax-highlighting
+
+## Switch to Agnoster ZSH theme
+Install the powerline fonts for the agnoster theme
 ```shell script
-mkdir -p ~/software/zsh
-cd ~/software/zsh
-git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+sudo apt-get install fonts-powerline
 ```
 
-### zsh autosuggestions
-https://github.com/zsh-users/zsh-autosuggestions/blob/master/
-```shell script
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-### zsh-256color
-https://github.com/chrissicool/zsh-256color
-```shell script
-git clone git@github.com:chrissicool/zsh-256color.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-256color
-```
-
-## Modify ZSH theme
 Open `~/.zshrc` and modify the theme:
 ```shell script
 # Set name of the theme to load --- if set to "random", it will
@@ -82,9 +81,20 @@ Open `~/.zshrc` and modify the theme:
 ZSH_THEME="agnoster"
 ```
 
+### (Optional) Switch to customized agnoster theme
+The agnoster theme was meant for a solaris color scheme. If your terminal
+uses a black background, the name of the directories can be hard to read.
+I updated the agnoster theme so that the name of directories was white instead of black.
+Download it here: https://github.com/Shreeyak/agnoster-zsh-theme
+```shell script
+git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
+cp ~/.oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme.bak
+cp agnoster-zsh-theme/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme
+```
+
 
 ## Configure ZSH params
-The config file for zsh is at `~/.zshrc`. Open the file and add the below lines. If they already exist, modify them:
+Open `~/.zshrc` (zsh config file) and add the below lines. If they already exist, modify them:
 
 ```shell script
 # Large history file
@@ -127,16 +137,5 @@ export LC_CTYPE=en_US.UTF-8
 If using anaconda to manage python environments, init it so you can access `conda` from zsh:
 ```shell script
 conda init zsh
-```
-
-## (Optional) Update agnoster theme
-The agnoster theme was meant for a solaris color scheme. If your terminal
-uses a black background, the name of the directories can be hard to read.
-I updated the agnoster theme so that the name of directories was white instead of black.
-Download it here: https://github.com/Shreeyak/agnoster-zsh-theme
-```shell script
-git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
-cp ~/.oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme.bak
-cp agnoster-zsh-theme/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme
 ```
 
