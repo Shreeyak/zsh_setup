@@ -35,11 +35,13 @@ Clone the following plugin's repos into oh-my-zsh's plugin directory:
 - zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
 - zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions
 - zsh-256color: https://github.com/chrissicool/zsh-256color
+- zsh-dircolors-solarized: https://github.com/joel-porquet/zsh-dircolors-solarized
 
 ```shell script
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone git@github.com:chrissicool/zsh-256color.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-256color
+git clone --recursive git://github.com/joel-porquet/zsh-dircolors-solarized $ZSH_CUSTOM/plugins/zsh-dircolors-solarized
 ```
 
 Within the `~/zshrc` file, search for the line with plugins and add:
@@ -49,8 +51,18 @@ Within the `~/zshrc` file, search for the line with plugins and add:
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-256color zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-256color zsh-syntax-highlighting zsh-dircolors-solarized)
 ```
+
+See which dircolor schemes are available:
+```shell script
+lssolarized
+```
+Set the "ansi-dark" dircolor scheme:
+```shell script
+setupsolarized dircolors.ansi-dark
+```
+
 
 ### Fuzzy finder
 https://github.com/junegunn/fzf
@@ -87,6 +99,7 @@ uses a black background, the name of the directories can be hard to read.
 I updated the agnoster theme so that the name of directories was white instead of black.
 Download it here: https://github.com/Shreeyak/agnoster-zsh-theme
 ```shell script
+cd ~/software/zsh
 git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
 cp ~/.oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme.bak
 cp agnoster-zsh-theme/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme
@@ -105,7 +118,7 @@ SAVEHIST=10000000
 setopt hist_ignore_all_dups hist_save_nodups
 
 # Um... colors?
-eval `dircolors ~/.dir_colors/dircolors`
+# eval `dircolors ~/.dir_colors/dircolors` - This is not the default location of dircolors on ubuntu. Causes errors.
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=250'
 
 # interactive cd
