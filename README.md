@@ -97,11 +97,11 @@ ZSH_THEME="agnoster"
 The agnoster theme was meant for a solaris color scheme. If your terminal
 uses a black background, the name of the directories can be hard to read.
 I updated the agnoster theme so that the name of directories was white instead of black.
-Download it here: https://github.com/Shreeyak/agnoster-zsh-theme
+Download it here: git@github.com:Shreeyak/agnosterj-zsh-theme.git
 ```shell script
 cd ~/software/zsh
 git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
-cp agnoster-zsh-theme/agnostermod.zsh-theme ~/.oh-my-zsh/themes/agnostermod.zsh-theme
+cp agnosterj-zsh-theme/agnosterj.zsh-theme ~/.oh-my-zsh/themes/agnosterj.zsh-theme
 ```
 
 Open `~/.zshrc` and modify the theme:
@@ -110,7 +110,7 @@ Open `~/.zshrc` and modify the theme:
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnostermod"
+ZSH_THEME="agnosterj"
 ```
 
 
