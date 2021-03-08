@@ -101,8 +101,16 @@ Download it here: https://github.com/Shreeyak/agnoster-zsh-theme
 ```shell script
 cd ~/software/zsh
 git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
-cp ~/.oh-my-zsh/themes/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme.bak
-cp agnoster-zsh-theme/agnoster.zsh-theme ~/.oh-my-zsh/themes/agnoster.zsh-theme
+cp agnoster-zsh-theme/agnostermod.zsh-theme ~/.oh-my-zsh/themes/agnostermod.zsh-theme
+```
+
+Open `~/.zshrc` and modify the theme:
+```shell script
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnostermod"
 ```
 
 
