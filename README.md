@@ -152,6 +152,13 @@ function cd() {
 
 # Sorts issues with tmux
 export LC_CTYPE=en_US.UTF-8
+
+# Set the autocomplete color (chosen: purple)
+# Ref for colors: https://coderwall.com/p/pb1uzq/z-shell-colors
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=62'
+
+# set the zsh no-match behavior is the same as bash (for glob patterns to scp and the like)
+setopt nonomatch
 ```
 
 ## Init conda
