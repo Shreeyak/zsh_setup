@@ -29,6 +29,8 @@ sh -c "$(wget --no-check-certificat -O- https://raw.githubusercontent.com/ohmyzs
 
 ## Switch to PowerLevel10k theme
 
+![](shell_p10k_1.png)
+
 ```shell
 git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
@@ -47,8 +49,6 @@ To run the wizard again, call:
 ```shell
 p10k configure
 ```
-
-![](shell_p10k_1.png)
 
 
 ## Install Plugins
