@@ -26,6 +26,29 @@ https://github.com/ohmyzsh/ohmyzsh
 sh -c "$(wget --no-check-certificat -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+## Switch to PowerLevel10k theme
+
+```shell
+git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Open `~/.zshrc` and modify the theme:
+```shell script
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+
+Next time the terminal is started the configure wizard should start up. Select the options to customize the look.
+To run the wizard again, call:
+```shell
+p10k configure
+```
+
+![](shell_p10k_1.png)
+![](shell_p10k_2.png)
 
 
 ## Install Plugins
@@ -76,43 +99,6 @@ Running install will add the following lines to `.zshrc`:
 # Fuzzy Finder
  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
-
-
-## Switch to Agnoster ZSH theme
-Install the powerline fonts for the agnoster theme
-```shell script
-sudo apt-get install fonts-powerline
-```
-
-Open `~/.zshrc` and modify the theme:
-```shell script
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
-```
-
-### (Optional) Switch to customized agnoster theme
-The agnoster theme was meant for a solaris color scheme. If your terminal
-uses a black background, the name of the directories can be hard to read.
-I updated the agnoster theme so that the name of directories was white instead of black.
-Download it here: git@github.com:Shreeyak/agnosterj-zsh-theme.git
-```shell script
-cd ~/software/zsh
-git clone git@github.com:Shreeyak/agnoster-zsh-theme.git
-cp agnosterj-zsh-theme/agnosterj.zsh-theme ~/.oh-my-zsh/themes/agnosterj.zsh-theme
-```
-
-Open `~/.zshrc` and modify the theme:
-```shell script
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnosterj"
-```
-
 
 ## Configure ZSH params
 Open `~/.zshrc` (zsh config file) and add the below lines. If they already exist, modify them:
