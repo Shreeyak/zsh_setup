@@ -83,7 +83,7 @@ lssolarized
 ```
 Set the "ansi-dark" dircolor scheme:
 ```shell script
-setupsolarized dircolors.ansi-dark
+setupsolarized dircolors.256dark
 ```
 
 
