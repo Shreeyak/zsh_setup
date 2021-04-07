@@ -1,6 +1,7 @@
 # zsh_setup
-Instructions for setting up zsh shell, with oh-my-zsh and some plugins
-![](modified_shell.png)
+Instructions for setting up zsh shell, with oh-my-zsh, powerlevel10k theme and some plugins
+
+![](shell_p10k_2.png)
 
 # Setting up ZSH
 ZSH is an alternative to bash. It has many cool features, plugins and themes.
@@ -48,7 +49,6 @@ p10k configure
 ```
 
 ![](shell_p10k_1.png)
-![](shell_p10k_2.png)
 
 
 ## Install Plugins
