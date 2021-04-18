@@ -21,6 +21,27 @@ sudo apt install zsh
 chsh -s $(which zsh)
 ```
 
+## M1 Mac
+
+M1 Macs are built on the ARM64 arch. Many open-source packages are not available for this architecture.
+However, the terminal can run apps for x86 architecture using the Rosetta 2 emulator.
+This can be done by
+1. Starting the terminal with Rosetta 2. Go to ~/Applications, right-click on the terminal -> Get Info. 
+  Select the "Open using Rosetta 2" checkbox to force the application to run on the emulator.
+2. Start the shell using the arch command: `arch -x86_64 /bin/zsh`. 
+    1. If using iTerm2: Preferences -> Profiles -> General tab. Change the drop-down option Command from 
+"Login Shell" to "Command" and use the command: `arch -x86_64 /bin/zsh`.
+    2. Inside Pycharm: Preferences -> Tools -> Terminal. Under "Application Settings", set "Shell Path" to `arch -x86_64 /bin/zsh`.
+
+This will set the shell to run python (and other apps) on the x86 arch, enabling x86 packages to be installed.
+To check if this was successful, in a new terminal type `uname -m` and you'll see the architecture:
+
+```shell script
+❯ uname -m
+x86_64
+
+```
+
 ## Install oh-my-zsh
 https://github.com/ohmyzsh/ohmyzsh
 ```shell script
