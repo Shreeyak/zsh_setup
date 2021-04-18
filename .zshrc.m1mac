@@ -169,3 +169,6 @@ setopt nonomatch
 export PATH=$HOME/software/synthesis-client-go_0.0.24:$PATH
 export SYNTHESIS_CLIENT_PROMPT=1
 
+# Add VS Code to PATH to run code from terminal
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
