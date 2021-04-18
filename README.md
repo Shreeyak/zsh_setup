@@ -42,6 +42,11 @@ x86_64
 
 ```
 
+### Install homebrew using similar command:
+```shell script
+arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
 ## Install oh-my-zsh
 https://github.com/ohmyzsh/ohmyzsh
 ```shell script
